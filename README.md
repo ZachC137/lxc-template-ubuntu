@@ -1,6 +1,6 @@
 **Custom Ubuntu 22.04 LXC Template**
 =====================================
-
+* (Privilaged Container)
 This is a custom preloaded Ubuntu 22.04 LXC template, designed to provide a comprehensive development environment for various programming languages and tools.
 
 **Features**
